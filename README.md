@@ -18,7 +18,6 @@ Les spécifications des requis contiennent les directives des laboratoires 1, 2 
 - Voici le code source fourni (incluant JDBC): [src](src)
 - Code pour l'insertion XML: [LectureBC.java](src/lecture/LectureBD.java)
 - Code pour la lecture du vidéo: [Videoplayer.zip](https://cours.etsmtl.ca/gti660/private/labos/videoplayer.zip)
--
 
 ## Gestionnaire de version GIT (obligatoire)
 
@@ -33,3 +32,33 @@ Je vous suggère fortement d'utiliser cette configuration pour la réalisation d
 - Générer vos rapports PDF en utilisant le plugin [Markdown PDF](https://marketplace.visualstudio.com/items?itemName=yzane.markdown-pdf)
 - Réaliser vos diagrammes à l'aide du plugin [PlantUml](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml) en utilisant cette [documentation](https://plantuml.com/fr/).
 - Voir un [exemple](doc/rapports/exemple/exemple.md)
+
+# Test Driven Design
+
+Pour exécuter tout les tests
+```bash
+mvn test 
+```
+
+Pour obtenir le rapport de couverture de test
+```bash
+mvn -P jacoco test
+```
+Tout les tests doivent passer pour pouvoir générer le rapport de couverture de test.
+[Ouvrir le rapport jacoco dans votre browser](./target/jacoco/site/../../site/jacoco/index.html)
+
+
+## Maven file Watch
+```bash
+npm install grunt
+grunt mvnwatch:<FOLDER_TO_WATCH>
+grunt mvnwatch:.
+```
+
+## Generation des diagramme de classes
+```bash
+java -jar plantuml-dependency-cli-1.4.0-jar-with-dependencies.jar -o plantuml.puml -b . -i **/*.java -e **/*Test*.jva -dn .*Test.* -v
+
+
+java -jar plantuml-dependency-cli-1.4.0-jar-with-dependencies.jar -o plantuml-framework-graphed2.puml -b . -i ./src/main/java/Framework/**/*.java -e **/*Test*.jva -dn .*Test.* -v
+```
