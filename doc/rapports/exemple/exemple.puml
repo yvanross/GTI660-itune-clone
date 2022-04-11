@@ -1,0 +1,31 @@
+' Menu contextuel "Preview current diagram"
+' Menu contextuel "Export current file diagrams" pour générer les fichiers svg
+@startuml mdd-laboratoire-01
+title Modèle de données
+
+class Etudiant {
+  prenom: string
+  nom: string
+}
+
+class Equipe
+class "Rapport" as R
+
+Equipe "1" -- "*" Etudiant : est composé de >
+Equipe -- "3" R: génère >
+
+@enduml
+
+' on peut mettre plusieurs diagramme dans un même fichier
+
+@startuml diagramme-sequence
+title Diagramme de séquence
+skinparam style strictuml
+actor "e:Etudiant" as Etudiant
+participant Equipe
+participant Rapport
+Etudiant -> Equipe: inscrire(e)
+Etudiant -> Equipe: creationRapport("Rapport 1")
+Equipe --> Rapport**: create("Rapport 1")
+
+@enduml
