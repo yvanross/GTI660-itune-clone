@@ -62,3 +62,15 @@ java -jar plantuml-dependency-cli-1.4.0-jar-with-dependencies.jar -o plantuml.pu
 
 java -jar plantuml-dependency-cli-1.4.0-jar-with-dependencies.jar -o plantuml-framework-graphed2.puml -b . -i ./src/main/java/Framework/**/*.java -e **/*Test*.jva -dn .*Test.* -v
 ```
+
+## Spécification supplémentaire
+- Vous devez impérativement utiliser une approche orienté objets.
+
+- Architecture en couche
+  - Architecture MVC
+  - Les router ne doivent pas créer d'objets du modèle de données
+  - Les classes Controleurs doivent utiliser des paramètres de type primitif (aucun objet). Les retours d'information sont aussi de type primitif. 
+  - todo: lien vers video architecture en couche
+  - Groupe de 4 à 5 personnes
+  - Répartition: 4 semaines par laboratoire.
+  

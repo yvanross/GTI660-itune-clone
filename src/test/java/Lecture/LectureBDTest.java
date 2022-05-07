@@ -27,12 +27,21 @@ public class LectureBDTest {
       LectureBD lecture = new LectureBD();
       assertNotNull(lecture);
       lecture.lecturePersonnes("./data/personnes_utf8.xml");
+      Person person = Person.find(859);
+      assertEquals(person.getId(),859);
+      assertEquals(person.getName(),"Lionel Barrymore");
+
+      assertEquals(Person.all().count(), 500);
+
+      // List<Person> persons = Person.all();
+// 859,Lionel Barrymore,1878-04-12,Philadelphia, Pennsylvania, USA,https://m.media-amazon.com/images/M/MV5BMTc5NzY5MTgwNV5BMl5BanBnXkFtZTYwMjc4NjQ2._V1_UY98_CR1,0,67,98_AL_.jpg
+
       // try {
         // clientReader.read();
       // } catch(Exception ex){ 
         // System.out.print("Error: "); 
         // System.out.println(ex.getMessage());
       // }
-      assertEquals("test","test");
+      assertEquals("test","test");  
   } 
 }     
