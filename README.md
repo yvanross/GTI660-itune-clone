@@ -74,3 +74,6 @@ java -jar plantuml-dependency-cli-1.4.0-jar-with-dependencies.jar -o plantuml-fr
   - Groupe de 4 à 5 personnes
   - Répartition: 4 semaines par laboratoire.
   
+
+  ## [Impressionnez nous](doc/exigences/impressionnnez-nou.md)
+  Point bonus possible...
