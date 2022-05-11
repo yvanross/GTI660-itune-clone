@@ -75,5 +75,5 @@ java -jar plantuml-dependency-cli-1.4.0-jar-with-dependencies.jar -o plantuml-fr
   - Répartition: 4 semaines par laboratoire.
   
 
-  ## [Impressionnez nous](doc/exigences/impressionnnez-nou.md)
+  ## [Impressionnez nous](doc/exigences/impressionnnez-nous.md)
   Point bonus possible...

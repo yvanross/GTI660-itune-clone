@@ -6,6 +6,9 @@ Exemple de recherche possible:
 - Par le texte dans la vidéo
 - Par le contenu audio
 - Par la recherche d'objet similaire
+- ...
 
 Faites vos propositions... 
+
+Discuter en avec le chargé de laboratoire ou l'enseignant avant de vous lancer dans l'implémentation.
 
