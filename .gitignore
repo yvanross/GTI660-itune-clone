@@ -1,3 +1,7 @@
 target/
 build/
-
+.DS_Store
+**/.DS_Store
+/doc/.DS_Store
+/scr/.DS_Store
+/build
